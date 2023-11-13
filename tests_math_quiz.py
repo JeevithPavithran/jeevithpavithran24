@@ -1,5 +1,5 @@
 import unittest
-from math_quiz import random_integer, random_operator, calculation
+from math_quiz import random_number, random_operator, calculation
 
 
 class TestMathGame(unittest.TestCase):
@@ -9,8 +9,8 @@ class TestMathGame(unittest.TestCase):
         min_val = 1
         max_val = 10
         for _ in range(1000):  # Test a large number of random values
-            rand_num =  random_integer(min_val, max_val)
-            self.assertTrue(min_val <= rand_num <= max_val)
+            rand_num =  random_number(min, max)
+            self.assertTrue(min <= rand_num <= max)
 
     def random_operator(self):
         rand_operator = random_operator()
